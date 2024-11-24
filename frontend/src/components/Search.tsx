@@ -1,7 +1,7 @@
 // import { useState } from "react";
 
 // Generics för ett sök värde där den kan vara en siffra eller en bokstav men inte "any"
-// Denne komponenten kommer inte att användas för tillfället pga av att jag inte fullt ut förstår skickandet av props med funktioner
+// Denna komponenten kommer inte att användas för tillfället pga av att jag inte fullt ut förstår skickandet av props med funktioner.
 export default function Search({
   onSearch,
 }: {
