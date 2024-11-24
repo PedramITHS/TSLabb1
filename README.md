@@ -38,3 +38,13 @@ npm run start
 ## Additional notes
 
 - No .env files are included, have look at **.env.example** inside the **backend** folder for an idea on setting up your enviroment for the backend/database
+
+## Goals achieved
+
+- Frontend/Backend/Database connected to each other
+- Front page is presented via a GET method
+- Additional CRUD (POST/PATCH/DELETE) operations are included and working
+- No .js or .jsx files used
+- Props with an interface is utilized
+- useState wiht a generic implemented
+- An inteface describing what is being fetched from the database has been added
