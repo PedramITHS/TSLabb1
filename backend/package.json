@@ -16,6 +16,7 @@
     "cors": "^2.8.5",
     "eslint": "^9.15.0",
     "express": "^4.21.1",
+    "labb1": "file:..",
     "pg": "^8.13.1"
   },
   "devDependencies": {
