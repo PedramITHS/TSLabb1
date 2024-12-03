@@ -31,13 +31,13 @@ export default function Delete() {
         console.error("Not correctly set as an array");
       }
     });
-  }, []);
+  }, [loaded]);
 
   const changeVal = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value } = event.target;
+    // const { name, value } = event.target;
     setDel((prevValue) => ({
       ...prevValue,
-      [name]: Number(value),
+      [event.target.name]: event.target.value,
     }));
   };
 
@@ -50,6 +50,7 @@ export default function Delete() {
       })
       .then((resp) => {
         console.log("Fetched data:", resp.data);
+        setLoaded(true);
       })
       .catch((error: AxiosError) => {
         if (error.response) {
@@ -82,14 +83,13 @@ export default function Delete() {
             <Form.Group className="mb-3">
               <Form.Label>Enter ID:</Form.Label>
               <Form.Control
-                required
                 name="game_id"
+                value={del.game_id}
                 onChange={changeVal}
                 id="game_id"
                 className="col-md-6 w-50 text-center mx-auto"
-                placeholder="Id..."
                 type="number"
-                value={del.game_id}
+                placeholder="Id..."
               />
             </Form.Group>
             <button type="submit">Delete it!</button>

@@ -72,7 +72,7 @@ export default function Games() {
             {games.map((game, index) => (
               <div
                 key={index}
-                className="shadow-white border border-2 rounded-3 mb-2 mx-1"
+                className="shadow-white border border-2 rounded-3 mb-2 mx-1 aCard"
                 style={{
                   width: "18rem",
                   boxShadow:

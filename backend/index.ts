@@ -21,6 +21,9 @@ enum HttpCode {
   serverFail = 500,
   clientFail = 404,
   Success = 200,
+  Created = 201,
+  NoContent = 204,
+  BadRequest = 400,
 }
 
 interface Game {
@@ -67,7 +70,7 @@ app.post("/games/post", async (req: Request, res: Response): Promise<void> => {
   ];
   try {
     const { rows } = await client.query<Game>(query, values);
-    res.status(HttpCode.Success).send(rows);
+    res.status(HttpCode.Created).send(...rows);
   } catch (error) {
     console.log(error);
     res
@@ -100,7 +103,7 @@ app.patch(
     try {
       const update = await client.query<Game>(query, values);
       if (update.rowCount! > 0) {
-        res.status(HttpCode.Success).send(update.rows);
+        res.status(HttpCode.Success).send(...update.rows);
       } else {
         res.status(HttpCode.clientFail).send({ message: "Incorrect input" });
       }
@@ -124,7 +127,7 @@ app.delete(
       if (deleted.rowCount === 0) {
         res.status(HttpCode.clientFail).send({ message: "Incorrect input" });
       } else {
-        res.status(HttpCode.Success).send(deleted.rows);
+        res.status(HttpCode.Success).send(...deleted.rows);
       }
     } catch (error: any) {
       res
