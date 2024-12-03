@@ -2,7 +2,7 @@
 
 ## Features
 
-- Display a custom list of yourfavorite games!
+- Display a custom list of your favorite games!
 - A POST form for inserting new games
 - A PATCH form for updating a game currently on the list
 - A DELETE form for deleting a game on the list
@@ -31,14 +31,6 @@ npm run start
 
 ## Goals achieved
 
-- Frontend/Backend/Database connected to each other
-- Front page is presented via a GET method
-- Additional CRUD (POST/PATCH/DELETE) operations are included and working
-- No .js or .jsx files used
-- Props with an interface is utilized
-- useState wiht a generic implemented
-- An inteface describing what is being fetched from the database has been added
-
 ---
 
 **UPDATE 2023/11/30**
@@ -46,3 +38,13 @@ npm run start
 - Added integration tests from Cypress
 - Added tests involving mock data
 - A complete E2E test involving the UI, interaction with POST/PATCH/DEL forms
+
+---
+
+- Frontend/Backend/Database connected to each other
+- Front page is presented via a GET method
+- Additional CRUD (POST/PATCH/DELETE) operations are included and working
+- No .js or .jsx files used
+- Props with an interface is utilized
+- useState wiht a generic implemented
+- An inteface describing what is being fetched from the database has been added
